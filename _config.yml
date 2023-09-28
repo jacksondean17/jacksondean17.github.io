@@ -27,11 +27,11 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  jacksondean17
 linkedin_username: jacksondean17
 
-resume_url: /asseta/other/resume.pdf
+resume_url: /assets/other/resume.pdf
 portrait_url: /assets/images/portrait.jpg
 
 header_pages:
-  - about.md
+  - about.markdown
 
 # Build settings
 theme: minima
