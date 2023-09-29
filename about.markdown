@@ -4,6 +4,8 @@ title: About Me
 permalink: /about/
 ---
 
+[My Resume]({{ site.resume_url }})
+
 
 Seventeen-year-old me thought that the two most wonderous things in the world were robots and rockets, so naturally I majored in mechanical engineering. Of course I still believe this, but after a few semesters, I realized that if you wanted your robot to do anything interesting, and your rocket to not spiral out of the sky, you had to put a computer in it, so I ended up with two degrees: mechanical engineering and computer science.
 
