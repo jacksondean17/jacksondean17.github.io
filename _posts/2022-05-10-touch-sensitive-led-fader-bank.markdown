@@ -9,6 +9,7 @@ images-path: /assets/images/posts/2022-05-10-touch-sensitive-led-fader-bank/
 
 _{{ page.exerpt }}_
 
+![fader-bank]({{ page.images-path | append: "glamour-shot.png" }}){:class="img-responsive"}
 
 #### Background
 <hr>

@@ -9,6 +9,8 @@ images-path: /assets/images/posts/2023-04-12-voyager-keyboard/
 
 _{{ page.exerpt }}_
 
+![keyboard-pcb]({{ page.images-path | append: "angle-glamour.jpg" }}){:class="img-responsive"}
+
 #### Background
 <hr>
 I too used to use a "normal" keyboard. A cheap plastic membrane switch keyboard that came with a computer I purchased. In college I realized that there were better options and bought a logitech gaming keyboard. I was completely satisified by this for years until I was enlightened (corrupted?) by my discovery of the [r/mechanicalkeyboards subreddit](https://www.reddit.com/r/mechanicalkeyboards). People on there were frequently spending hundreds of dollars on customized, high quality, limited edition keyboards. It didn't take long before I built a keyboard of my own, and while I was happy with the result, I was dissatisfied by the "building" process. My keyboard (and the vast majority of the projects on r/mechanicalkeyboards) are actually just assembled from parts purchased online, not really built from scratch. 
