@@ -77,7 +77,7 @@ I applied the inlay as a thick paste over the engraved grooves, then it only too
 
 The last parts to make were the clear windows between the number and function keys. I made these late at night all in one sitting and forgot to take a single picture of the process so you'll just have to imagine.
 
-I cut out slightly oversided rectangular acrylic blanks with a laser cutter and attached them to a sacrificial base board with machinable fixturing wax. I machined them in a small desktop CNC mill using downcutting tools to avoid pulling the parts away from the wax. 
+I cut out slightly oversized rectangular acrylic blanks with a laser cutter and attached them to a sacrificial base board with machinable fixturing wax. I machined them in a small desktop CNC mill using downcutting tools to avoid pulling the parts away from the wax. 
 
 The only thing left was to take glamour shots and post them online to get validation from strangers on the internet.
 
