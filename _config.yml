@@ -26,6 +26,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  jacksondean17
 linkedin_username: jacksondean17
+substack_username: jacksondean17
 
 resume_url: /assets/other/resume.pdf
 portrait_url: /assets/images/portrait.jpg
