@@ -30,6 +30,7 @@ permalink: /rickroll/
     justify-content: center;
     padding: 2vw;
     box-sizing: border-box;
+    margin-bottom: 0;
   }
   
   .video-container iframe {
@@ -52,12 +53,13 @@ permalink: /rickroll/
   .contact-info {
     text-align: center;
     padding: 4vw;
-    min-height: 100vh;
+    min-height: 50vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
+    margin-bottom: 10vh;
   }
   
   .contact-info h3 {
@@ -202,11 +204,15 @@ permalink: /rickroll/
   
   html.scrolling-enabled {
     overflow: auto;
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y proximity;
   }
   
-  .scroll-section, .video-container, .contact-info {
+  .scroll-section, .video-container {
     scroll-snap-align: start;
+  }
+  
+  .contact-info {
+    scroll-snap-align: none;
   }
 </style>
 
