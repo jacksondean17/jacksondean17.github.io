@@ -34,18 +34,20 @@ permalink: /rickroll/
   }
   
   .video-container iframe {
-    width: 100%;
-    height: 56.25vw; /* 16:9 aspect ratio */
-    max-height: 70vh;
+    width: 95%;
+    height: calc(95vw * 0.5625); /* 16:9 aspect ratio of the width */
+    max-width: 90vw;
+    max-height: 75vh;
     border: none;
     border-radius: 1vw;
-    box-shadow: 0 2vw 6vw rgba(0,0,0,0.3);
+    box-shadow: 0 3vw 8vw rgba(0,0,0,0.4);
   }
   
   @media (max-width: 768px) {
     .video-container iframe {
-      height: 80vw;
-      max-height: 60vh;
+      width: 98%;
+      height: calc(98vw * 0.5625);
+      max-height: 75vh;
       border-radius: 2vw;
     }
   }
@@ -63,62 +65,97 @@ permalink: /rickroll/
   }
   
   .contact-info h3 {
-    margin-bottom: 2vw;
+    margin-bottom: 1rem;
     color: #333;
-    font-size: 4vw;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 600;
   }
   
   .contact-info p {
-    margin: 1vw 0;
-    font-size: 2.5vw;
+    margin: 0.5rem 0 2rem 0;
+    font-size: clamp(1rem, 2vw, 1.3rem);
     color: #666;
   }
   
-  .download-btn {
-    display: inline-block;
-    background-color: #1976d2;
-    color: white;
-    padding: 2vw 4vw;
-    text-decoration: none;
-    border-radius: 1vw;
-    font-weight: bold;
-    transition: all 0.3s;
-    margin-top: 3vw;
-    font-size: 2vw;
+  .button-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
   
-  .download-btn:hover {
-    background-color: #1565c0;
-    color: white;
+  .contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(145deg, #f8f9fa, #e9ecef);
+    color: #6c757d;
+    padding: 0.75rem 1.5rem;
     text-decoration: none;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    border: 0.2vw solid #dee2e6;
+    box-shadow: 
+      0 0.5vw 1vw rgba(0,0,0,0.1),
+      inset 0 0.2vw 0.4vw rgba(255,255,255,0.8),
+      inset 0 -0.2vw 0.4vw rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    min-width: 140px;
+    justify-content: center;
+  }
+  
+  .contact-btn:hover {
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
     transform: scale(1.05);
+    box-shadow: 
+      0 0.8vw 1.5vw rgba(0,0,0,0.15),
+      inset 0 0.3vw 0.6vw rgba(255,255,255,0.9),
+      inset 0 -0.3vw 0.6vw rgba(0,0,0,0.15);
+    color: #495057;
+    text-decoration: none;
+  }
+  
+  .contact-btn:active {
+    transform: scale(0.95);
+    background: linear-gradient(145deg, #e9ecef, #dee2e6);
+    box-shadow: 
+      0 0.3vw 0.6vw rgba(0,0,0,0.2),
+      inset 0 0.1vw 0.2vw rgba(0,0,0,0.2),
+      inset 0 -0.1vw 0.1vw rgba(255,255,255,0.7);
+  }
+  
+  .btn-icon {
+    width: 1.2rem;
+    height: 1.2rem;
+    fill: currentColor;
   }
   
   @media (max-width: 768px) {
-    .contact-info h3 {
-      font-size: 6vw;
+    .button-container {
+      flex-direction: column;
+      gap: 0.75rem;
     }
     
-    .contact-info p {
-      font-size: 4vw;
-    }
-    
-    .download-btn {
-      font-size: 3.5vw;
-      padding: 3vw 6vw;
-      border-radius: 2vw;
+    .contact-btn {
+      width: 100%;
+      max-width: 280px;
     }
   }
   
   .scroll-section {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
+    background: transparent;
     position: relative;
     overflow: hidden;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
   }
   
   .giant-arrow-button {
@@ -142,6 +179,10 @@ permalink: /rickroll/
     justify-content: center;
     user-select: none;
     animation: slowPulse 4s ease-in-out infinite;
+    margin: 0 auto;
+    position: relative;
+    left: 0;
+    right: 0;
   }
   
   .giant-arrow-button:hover {
@@ -171,6 +212,60 @@ permalink: /rickroll/
   
   .giant-arrow-button:hover .arrow-svg {
     fill: #495057;
+  }
+  
+  .scroll-hint {
+    position: absolute;
+    bottom: 1vw;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: gentleBounce 3s ease-in-out infinite;
+    opacity: 0.7;
+    z-index: 10;
+  }
+  
+  .scroll-hint-arrow {
+    width: 3vw;
+    height: 3vw;
+    min-width: 30px;
+    min-height: 30px;
+    max-width: 60px;
+    max-height: 60px;
+    fill: #6c757d;
+    margin-bottom: 1vw;
+  }
+  
+  .scroll-hint-text {
+    font-size: 1.5vw;
+    color: #6c757d;
+    text-align: center;
+    font-weight: 500;
+    min-font-size: 12px;
+  }
+  
+  @keyframes gentleBounce {
+    0%, 100% {
+      transform: translateX(-50%) translateY(0);
+      opacity: 0.7;
+    }
+    50% {
+      transform: translateX(-50%) translateY(10px);
+      opacity: 1;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .scroll-hint-arrow {
+      width: 5vw;
+      height: 5vw;
+    }
+    
+    .scroll-hint-text {
+      font-size: 2.5vw;
+    }
   }
   
   @media (max-width: 768px) {
@@ -234,15 +329,33 @@ permalink: /rickroll/
      allowfullscreen
      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
    </iframe>
+   
+   <div class="scroll-hint">
+     <svg class="scroll-hint-arrow" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+       <path d="M12 16.5l-6-6h12l-6 6z"/>
+     </svg>
+   </div>
 </div>
 
 <div class="contact-info" id="contact-info">
   <h3>Jackson Dean</h3>
-  <p>jacksondean17@gmail.com</p>
   
-  <a href="/assets/other/contact.vcf" class="download-btn" download="Jackson_Dean_Contact.vcf">
-    💾 Save My Contact
-  </a>
+  <div class="button-container">
+    <a href="/assets/other/contact.vcf" class="contact-btn download-btn" download="Jackson_Dean_Contact.vcf">
+      <svg class="btn-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+        <path d="M12,11L16,15H13V19H11V15H8L12,11Z"/>
+      </svg>
+      Save Contact
+    </a>
+    
+    <a href="/about/" class="contact-btn about-btn">
+      <svg class="btn-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+      </svg>
+      About Me
+    </a>
+  </div>
 </div>
 
 <script>
@@ -272,7 +385,7 @@ function startVideo() {
   
   // Use YouTube embed with aggressive autoplay parameters - this should work now!
   const iframe = document.getElementById('rick-iframe');
-  iframe.src = 'https://www.youtube.com/embed/dQw4w9WgXcQ?start=44&autoplay=1&mute=0&controls=1&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&enablejsapi=1';
+  iframe.src = 'https://www.youtube.com/embed/dQw4w9WgXcQ?start=43&autoplay=1&mute=0&controls=1&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&enablejsapi=1';
   
   // Try multiple autoplay approaches after a brief delay
   setTimeout(() => {
