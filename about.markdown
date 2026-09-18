@@ -4,9 +4,6 @@ title: About Me
 permalink: /about/
 ---
 
-[My Resume]({{ site.resume_url }})
-
-
 Seventeen-year-old me thought that the two most wonderous things in the world were robots and rockets, so naturally I majored in mechanical engineering. Of course I still believe this, but after a few semesters, I realized that if you wanted your robot to do anything interesting, and your rocket to not spiral out of the sky, you had to put a computer in it, so I ended up with two degrees: mechanical engineering and computer science.
 
 For a few years I worked as a do-it-all engineer at a small robotics company. On any given day I could be machining parts in the morning, debugging PCB schematics at lunch, and writing firmware in the afternoon.
