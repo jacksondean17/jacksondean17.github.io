@@ -63,3 +63,13 @@ google_analytics: G-1G0NBBZHRV
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+#
+# Note: under Jekyll 3.x (github-pages) this list *replaces* the defaults
+# rather than extending them, so they are repeated here.
+exclude:
+  - CLAUDE.md
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
